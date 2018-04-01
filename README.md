@@ -14,7 +14,7 @@
 
 #### 注：前端使用ES6的很多新特性，所以NodeJs 必须是6.0稳定版本，我使用的版本是6.2.0
 
-（1）git clone https://github.com/zymseo/VueNode.git
+（1）git clone https://github.com/wangrui9217/VueNode.git
 
 （2）npm install
 
@@ -26,17 +26,7 @@
 
 （6）数据库tour_user表中的用户默认密码均为123456
 
-### 使用PHP或JAVA等后端语言替换NodeJs的方法
 
-此项目作为前后端分离开发的测试，后端只是提供增删改查的数据接口，所有的路由及控制器方法都由前端来完成，所以可以将Node替换为你想要的任何后端开发语言，具体方法如下：
-
-（1）将项目下载到本地，并执行npm install之后，继续执行npm run build；
-
-（2）build完成之后，会在项目根目录下生成dist目录，将dist目录下所有的文件拷贝到服务器根目录下，主域一般是localhost:80或127.0.0.1:80；
-
-（3）在你的根目录下构建服务端，注意服务端接口要和前端接口保持一致；
-
-（4）举个栗子，我的项目构建成功之后，使用PHP作为后端接口，实现了查找国家和地区的功能，完整Demo是此项目根目录下的php_test文件夹。
 
 ### 说明
 
@@ -48,8 +38,6 @@
 
 如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
-### 个人微信&QQ：1047832475
-![image](https://github.com/zymseo/VueNode/blob/master/wechat.png)
 
 ### 目标功能
 
@@ -91,10 +79,10 @@
 │   ├── App.vue				// 主页面 
 │   └── main.js				// Webpack 预编译入口
 ├── static			// 前端公用静态文件目录
-│   ├── css         
-│   ├── images          
-│   ├── js     
-│   ├── less         
+│   ├── css
+│   ├── images
+│   ├── js
+│   ├── less
 │   └── upload
 ├── .babelrc			// ES6等babel的一些配置
 ├── .editorconfig		// 编辑器的一些配置
