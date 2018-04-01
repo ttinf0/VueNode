@@ -1,6 +1,6 @@
 /*
  * Description: 登录
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/16
 */
 
@@ -20,7 +20,7 @@ router.post('/loginForm', (req, res) => {
 			data ? resolve(data) : reject(error);
 		});
 	});
-	
+
 	// 0:用户不存在		1:登录成功		2:登录失败
 	p.then((data) => {
 		const len = data.length;

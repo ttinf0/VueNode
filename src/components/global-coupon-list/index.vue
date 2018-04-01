@@ -104,6 +104,7 @@
 				// 为防止vuex中保持的countryName与判断条件中默认的countryName冲突，首次加载列表页的时候就需要获取到countryList，保证条件筛选正确
 				!this.countryList &&
 				this.$http.post('/globalCouponList/countryList', {emulateJSON: true}).then((result) => {
+				  console.log(result)
 					let data = JSON.parse(result.bodyText);
 					this.countryList = data.countryList;
 				});

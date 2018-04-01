@@ -1,6 +1,6 @@
 /*
  * Description: app首页控制器
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/19
 */
 
@@ -89,7 +89,7 @@ router.post('/chooseCountry', (req, res) => {
 			featureArticle: result[2]
 		});
 		bannerData = hotCoupon = featureArticle = result = null;
-	});	
+	});
 });
 
 module.exports = router;

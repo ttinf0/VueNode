@@ -1,6 +1,6 @@
 /*
  * Description: Vue路由
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/10/1
 */
 
@@ -60,7 +60,7 @@ export default new Router({
 				}
 			]
 		},
-		
+
 		{
 			path: '/forgetPwdFirstStep',
 			name: 'ForgetPwdFirstStep',

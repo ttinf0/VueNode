@@ -1,6 +1,6 @@
 /*
  * Description: 数据库配置
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/16
 */
 

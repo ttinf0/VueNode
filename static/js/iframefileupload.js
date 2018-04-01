@@ -1,6 +1,6 @@
 /*
  * Description: iframefileupload.js通过原生JS实现，用最少的代码库依赖实现页面无刷新上传文件的同时也可以向后端传递json数据等。
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/08/15
  * License: Apache2.0 , https://github.com/zymseo/iframeFileUpload
 */
@@ -17,19 +17,19 @@
 		oDiv.innerHTML = str;
 		return oDiv.childNodes[0];
 	}
-	
+
 	function createUploadIframe (oDoc, oBody, id) {
 		var iframeId = 'iframe' + id,
 			iframeHtml = '<iframe name="'+ iframeId +'" id="'+ iframeId +'" src="about:blank" frameborder="0" style="display:none;"></iframe>';
 		oBody.appendChild(strToDom(iframeHtml));
 		return oDoc.querySelector('#' + iframeId);
 	}
-	
+
 	function createUploadForm (oDoc, oBody, url, data, id) {
 		var formId = 'form' + id,
 			tmpInpt = null,
 			formHtml = '<form action="'+ url +'" target="iframe'+ id +'" name="fileinfo" method="POST" enctype="multipart/form-data" id="'+ formId +'" style="display: none;">';
-		
+
 		for (var prop in data) {
 			formHtml += '<input type="text" name="'+ prop +'" value="'+ data[prop] +'" />';
 		}
@@ -43,7 +43,7 @@
 	function getData (iframe) {
 		return iframe.contentWindow.document.body.innerHTML || iframe.contentDocument.body.innerHTML;
 	}
-	
+
 	function IframeFileUpload (opt) {
 		this.opt = opt;
 	}
@@ -63,13 +63,13 @@
 			frag = null,
 			tmpNode = null,
 			oldNode = null;
-			
+
 		if (_elementIdLen) {
 			frag = oDoc.createDocumentFragment();
 			for (var i = 0; i < _elementIdLen; i += 1) {
 				oldNode = oDoc.querySelector('#' + _elementId[i]);
 				tmpNode = oldNode.cloneNode(true);
-				
+
 				oldNode.parentNode.insertBefore(tmpNode, oldNode);
 				frag.appendChild(oldNode);
 			}

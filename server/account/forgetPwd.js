@@ -1,6 +1,6 @@
 /*
  * Description: 找回密码第一步
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/17
 */
 

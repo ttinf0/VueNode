@@ -1,6 +1,6 @@
 /*
  * Description : 文件上传校验
- * User : zhaoyiming
+ * User : wangrui
  * Date : 2017/07/17
  * License: Apache2.0 ,https://github.com/zymseo/validateFileUpload
 */
@@ -120,7 +120,7 @@
 	ValidateFileUpload.prototype.init = function (source) {
 		return validateFile(this, source, this.fileType) ? true : false;
 	}
-	
+
 	// 实例化类，并返回校验结果
 	function validateFileUpload (opt) {
 		var validateObj = new ValidateFileUpload(opt),

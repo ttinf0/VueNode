@@ -1,6 +1,6 @@
 /*
  * Description: 个人资料修改控制器
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/10/1
 */
 
@@ -27,7 +27,7 @@ router.post('/changeUserHeadpic', multer.array('headpic'), (req, res, next) => {
 	const files = req.files[0];
 	const userId = req.body.id;
 	const filePath = '../../static/uploads/images/' + files.filename;
-	
+
 	db('update tour_user set user_headpic="'+ filePath +'" where id="'+ userId +'"', (error, data) => {
 		data && res.json({backInfo: data});
 	});

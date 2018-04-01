@@ -1,6 +1,6 @@
 /**
  * Description: 个人中心控制器
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/29
  */
 
@@ -13,14 +13,14 @@ const db = require('../db');
 */
 router.post('/basicMsg', (req, res) => {
 	const userId = req.body.userId;
-	
+
 	// 用户信息
 	let personalMsg = new Promise((resolve, reject) => {
 		db('select user_headpic from tour_user where id="'+ userId +'"', (error, data) => {
 			data ? resolve(data) : reject(error);
 		});
 	});
-	
+
 	// 领取的优惠券
 	let couponMsg = new Promise((resolve, reject) => {
 		db('select count(coupon_name) as num, coupon_type from tour_coupon where id in (select coupon_id from tour_coupon_user where user_id="'+ userId +'") group by coupon_type', (error, data) => {

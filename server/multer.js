@@ -1,6 +1,6 @@
 /*
  * Description: 从npm下载express文件上传使用方法
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/10/1
  * url: http://www.zymseo.com/node/472.html
 */

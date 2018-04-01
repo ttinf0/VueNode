@@ -1,6 +1,6 @@
 /*
  * Description: vuex-getters.js
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/17
 */
 

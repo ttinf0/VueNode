@@ -1,6 +1,6 @@
 /*
  * Description: 注册
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/16
 */
 
@@ -20,7 +20,7 @@ router.post('/registForm', (req, res) => {
 			data ? resolve(data) : reject(error);
 		});
 	});
-	
+
 	// 0:手机号已被注册		1:注册成功		2:注册失败
 	p.then((data) => {
 		if (data.length >= 1) {

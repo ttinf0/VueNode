@@ -1,6 +1,6 @@
 /*
  * Description: app全球优惠列表页控制器
- * User: zhaoyiming
+ * User: wangrui
  * Date: 2017/9/25
 */
 
